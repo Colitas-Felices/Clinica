@@ -1559,6 +1559,26 @@ ul {
   color: #ffffff;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer-logo {
+  height: 65px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1689,16 +1709,6 @@ ul {
   }
 }
 @media (max-width: 768px) {
-  .hero .hero-title {
-    font-size: 2rem;
-  }
-  .hero .hero-carousel .carousel-item img {
-    height: 250px;
-  }
-  .btn-hero {
-    padding: 14px 25px;
-    font-size: 1rem;
-  }
   .navbar .navbar-brand {
     font-size: 1.5rem;
   }
@@ -1715,6 +1725,22 @@ ul {
     padding: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .navbar-logo {
+    height: 50px;
+  }
+  .footer-logo {
+    height: 55px;
+  }
+  .hero .hero-title {
+    font-size: 2rem;
+  }
+  .hero .hero-carousel .carousel-item img {
+    height: 250px;
+  }
+  .btn-hero {
+    padding: 14px 25px;
+    font-size: 1rem;
   }
   .page-banner {
     padding: 60px 0;
@@ -1798,6 +1824,273 @@ ul {
   .services-page .video-section {
     max-width: 100%;
   }
+  .pep-shop-section .container,
+  .medicines-section .container,
+  .food-section .container,
+  .accessories-section .container {
+    overflow: visible;
+  }
+  .pep-shop-section .row,
+  .medicines-section .row,
+  .food-section .row,
+  .accessories-section .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+    gap: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .pep-shop-section .row::-webkit-scrollbar,
+  .medicines-section .row::-webkit-scrollbar,
+  .food-section .row::-webkit-scrollbar,
+  .accessories-section .row::-webkit-scrollbar {
+    display: none;
+  }
+  .pep-shop-section .row > [class*=col-],
+  .medicines-section .row > [class*=col-],
+  .food-section .row > [class*=col-],
+  .accessories-section .row > [class*=col-] {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .pep-shop-section .row > [class*=col-],
+  .medicines-section .row > [class*=col-],
+  .food-section .row > [class*=col-],
+  .accessories-section .row > [class*=col-] {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  .pep-shop-section .row > [class*=col-],
+  .medicines-section .row > [class*=col-],
+  .food-section .row > [class*=col-],
+  .accessories-section .row > [class*=col-] {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
+}
+@media (max-width: 768px) {
+  .pep-shop-section .product-card,
+  .medicines-section .product-card,
+  .food-section .product-card,
+  .accessories-section .product-card {
+    height: 100%;
+    margin-bottom: 5px;
+    min-width: 0;
+  }
+  .pep-shop-section .store-section-title,
+  .medicines-section .store-section-title,
+  .food-section .store-section-title,
+  .accessories-section .store-section-title {
+    position: relative;
+  }
+  .pep-shop-section .store-section-title::after,
+  .medicines-section .store-section-title::after,
+  .food-section .store-section-title::after,
+  .accessories-section .store-section-title::after {
+    content: "← Desliza →";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #f9a826;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+  }
+  .pep-shop-section .store-section-title.hide-swipe-indicator::after,
+  .medicines-section .store-section-title.hide-swipe-indicator::after,
+  .food-section .store-section-title.hide-swipe-indicator::after,
+  .accessories-section .store-section-title.hide-swipe-indicator::after {
+    display: none;
+  }
+  .store-section-title {
+    margin-top: 40px !important;
+    margin-bottom: 15px !important;
+    font-size: 1.8rem !important;
+  }
+  .store-section-subtitle {
+    margin-bottom: 25px !important;
+    font-size: 1rem !important;
+  }
+  .scroll-controls {
+    display: none;
+  }
+  .services-page .services-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+    gap: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .services-page .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .services-page .services-grid > [class*=col-] {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .services-page .services-grid > [class*=col-] {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  .services-page .services-grid > [class*=col-] {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
+}
+@media (max-width: 768px) {
+  .services-page .service-item-page {
+    height: 100%;
+    margin-bottom: 5px;
+    min-width: 0;
+  }
+  .services-page .section-title-services {
+    position: relative;
+  }
+  .services-page .section-title-services::after {
+    content: "← Desliza →";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #f9a826;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+  }
+  .info-section .info-grid-mv {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+    gap: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .info-section .info-grid-mv::-webkit-scrollbar {
+    display: none;
+  }
+  .info-section .info-grid-mv > [class*=col-] {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .info-section .info-grid-mv > [class*=col-] {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  .info-section .info-grid-mv > [class*=col-] {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
+}
+@media (max-width: 768px) {
+  .info-section .info-grid-re {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+    gap: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .info-section .info-grid-re::-webkit-scrollbar {
+    display: none;
+  }
+  .info-section .info-grid-re > [class*=col-] {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .info-section .info-grid-re > [class*=col-] {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  .info-section .info-grid-re > [class*=col-] {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
+}
+@media (max-width: 768px) {
+  .info-section .info-card {
+    height: 100%;
+    margin-bottom: 5px;
+    min-width: 0;
+  }
+  .info-section .section-title-info-mv {
+    position: relative;
+  }
+  .info-section .section-title-info-mv::after {
+    content: "← Desliza →";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #f9a826;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+  }
+  .info-section .section-title-info-re {
+    position: relative;
+  }
+  .info-section .section-title-info-re::after {
+    content: "← Desliza →";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #f9a826;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+  }
 }
 @media (max-width: 576px) {
   .hero .hero-title {
@@ -1808,6 +2101,9 @@ ul {
   }
   .navbar-collapse {
     padding: 10px;
+  }
+  .navbar-logo {
+    height: 45px;
   }
   .footer {
     padding: 40px 0 20px;
@@ -1831,39 +2127,20 @@ ul {
     width: 100%;
     max-width: 100%;
   }
-}
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.navbar-logo {
-  height: 60px;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .navbar-logo {
-    height: 50px;
+  .pep-shop-section .row > [class*=col-],
+  .medicines-section .row > [class*=col-],
+  .food-section .row > [class*=col-],
+  .accessories-section .row > [class*=col-] {
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
   }
-}
-@media (max-width: 576px) {
-  .navbar-logo {
-    height: 45px;
+  .services-page .services-grid > [class*=col-] {
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
   }
-}
-.footer-logo {
-  height: 65px;
-  width: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-@media (max-width: 768px) {
-  .footer-logo {
-    height: 55px;
+  .info-section .info-grid-mv > [class*=col-],
+  .info-section .info-grid-re > [class*=col-] {
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
   }
-}/*# sourceMappingURL=styles.css.map *// *   A c t u a l i z a c i � n   d e   i m � g e n e s   * /  
- 
+}/*# sourceMappingURL=styles.css.map */

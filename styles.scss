@@ -305,17 +305,14 @@ ul {
             img {
                 height: 450px;
                 object-fit: cover;
-                // REMOVIDO EL EFECTO ZOOM
                 transition: none;
             }
             
-            // REMOVIDO EL EFECTO DE ESCALA
             &.active img {
                 transform: none;
             }
         }
 
-        // OCULTAR FLECHAS DE NAVEGACIÓN
         .carousel-control-prev,
         .carousel-control-next {
             display: none !important;
@@ -876,14 +873,13 @@ ul {
         }
     }
     
-    // Sección de GIF - CORRECCIÓN PARA FORMATO VERTICAL
     .video-section {
         margin: 40px auto;
-        max-width: 400px; // Ancho máximo más pequeño para formato vertical
+        max-width: 400px;
         
         @media (min-width: 768px) {
             display: flex;
-            justify-content: center; // Centrar en web
+            justify-content: center;
             align-items: center;
         }
         
@@ -897,17 +893,15 @@ ul {
                 position: relative;
                 width: 100%;
                 
-                // Estilos para GIF vertical
                 .vertical-video {
                     width: 100%;
                     height: auto;
-                    max-width: 400px; // Tamaño máximo para mantener el formato vertical
+                    max-width: 400px;
                     display: block;
-                    margin: 0 auto; // Centrar el GIF
-                    border-radius: 15px; // Bordes redondeados para el GIF
+                    margin: 0 auto;
+                    border-radius: 15px;
                     
                     @media (min-width: 768px) {
-                        // En dispositivos más grandes, centramos el GIF vertical
                         display: block;
                         margin-left: auto;
                         margin-right: auto;
@@ -1418,7 +1412,7 @@ ul {
                 bottom: -10px;
                 left: 0;
                 width: 80px;
-                height: 4px; // ERROR CORREGIDO: era "height = 4px;" ahora es "height: 4px;"
+                height: 4px;
                 background: linear-gradient(to right, $primary-color, $accent-color);
                 border-radius: 2px;
             }
@@ -1749,7 +1743,7 @@ ul {
             border-bottom: 2px solid rgba($dark-color, 0.1);
             margin-bottom: 15px;
             overflow: hidden;
-            background: rgba($white, 0.7); // COLOR MÁS CLARO PARA LAS FAQ
+            background: rgba($white, 0.7);
             border-radius: 12px;
             padding: 0 15px;
             
@@ -1774,7 +1768,7 @@ ul {
                 h4 {
                     font-size: 1.3rem;
                     margin: 0;
-                    color: lighten($dark-color, 10%); // COLOR MÁS CLARO
+                    color: lighten($dark-color, 10%);
                     font-weight: 600;
                     @include transition;
                 }
@@ -1794,7 +1788,7 @@ ul {
                 p {
                     padding: 0 0 25px;
                     margin: 0;
-                    color: lighten($dark-color, 25%); // COLOR MÁS CLARO
+                    color: lighten($dark-color, 25%);
                     font-size: 1.05rem;
                     line-height: 1.6;
                 }
@@ -1839,7 +1833,29 @@ ul {
     }
 }
 
-// Responsive Design - MEJORAS PARA VERSIÓN MÓVIL
+// Estilos para el logo en la navbar - VERSIÓN SIMPLE
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+// Logo en footer también más grande
+.footer-logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+// ============================================
+// RESPONSIVE DESIGN
+// ============================================
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -1994,7 +2010,6 @@ ul {
             margin: 30px auto;
             
             .video-placeholder .video-container {
-                // Para móvil, el GIF se ve bien tal cual
                 .vertical-video {
                     width: 100%;
                     max-width: 400px;
@@ -2005,39 +2020,51 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .hero .hero-title {
-        font-size: 2rem;
+    // Navbar responsive
+    .navbar {
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            padding: 8px 14px;
+            font-size: 0.95rem;
+        }
     }
     
-    .hero .hero-carousel .carousel-item img {
-        height: 250px;
+    .navbar-collapse {
+        background: rgba(lighten($primary-color, 30%), 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 15px;
+        margin-top: 10px;
+        padding: 15px;
+        @include box-shadow(0, 10px, 30px, rgba(0,0,0,0.2));
+        border: 1px solid rgba($white, 0.2);
+    }
+    
+    .navbar-logo {
+        height: 50px;
+    }
+    
+    .footer-logo {
+        height: 55px;
+    }
+    
+    .hero {
+        .hero-title {
+            font-size: 2rem;
+        }
+        
+        .hero-carousel .carousel-item img {
+            height: 250px;
+        }
     }
     
     .btn-hero {
         padding: 14px 25px;
         font-size: 1rem;
     }
-    
-    .navbar .navbar-brand {
-        font-size: 1.5rem;
-    }
-    
-    .navbar .nav-link {
-        padding: 8px 14px;
-        font-size: 0.95rem;
-    }
-    
-    // En la sección de media queries, dentro de @media (max-width: 768px)
-.navbar-collapse {
-    background: rgba(lighten($primary-color, 30%), 0.95);
-    backdrop-filter: blur(15px); // Aumentado para más efecto de desvanecimiento
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 15px;
-    margin-top: 10px;
-    padding: 15px;
-    @include box-shadow(0, 10px, 30px, rgba(0,0,0,0.2));
-    border: 1px solid rgba($white, 0.2); // Borde sutil para separar
-}
     
     .page-banner {
         padding: 60px 0;
@@ -2125,36 +2152,316 @@ ul {
         padding: 30px 20px !important;
     }
     
-    .services-page .services-grid .service-item-page {
-        padding: 25px;
-        margin-bottom: 20px;
-        
-        h3 {
-            font-size: 1.3rem;
-            min-height: 50px;
+    .services-page {
+        .services-grid .service-item-page {
+            padding: 25px;
+            margin-bottom: 20px;
+            
+            h3 {
+                font-size: 1.3rem;
+                min-height: 50px;
+            }
+            
+            p {
+                min-height: 70px;
+            }
         }
         
-        p {
-            min-height: 70px;
+        .video-section {
+            max-width: 100%;
+        }
+    }
+    // ============================================
+    // TIENDA - PRODUCTOS HORIZONTALES CON SCROLL
+    // ============================================
+    .pep-shop-section,
+    .medicines-section,
+    .food-section,
+    .accessories-section {
+        
+        .container {
+            overflow: visible;
+        }
+        
+        .row {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            gap: 0;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            > [class*="col-"] {
+                flex: 0 0 85% !important;
+                max-width: 85% !important;
+                padding-left: 8px;
+                padding-right: 8px;
+                
+                @media (min-width: 480px) {
+                    flex: 0 0 45% !important;
+                    max-width: 45% !important;
+                }
+                
+                @media (min-width: 640px) {
+                    flex: 0 0 33.333% !important;
+                    max-width: 33.333% !important;
+                }
+            }
+        }
+        
+        .product-card {
+            height: 100%;
+            margin-bottom: 5px;
+            min-width: 0;
+        }
+        
+        .store-section-title {
+            position: relative;
+            
+            &::after {
+                content: '← Desliza →';
+                display: block;
+                font-size: 0.9rem;
+                font-weight: normal;
+                color: $primary-color;
+                margin-top: 10px;
+                font-family: $font-primary;
+                opacity: 0.8;
+                animation: pulse 2s infinite;
+            }
+            
+            &.hide-swipe-indicator::after {
+                display: none;
+            }
         }
     }
     
-    .services-page .video-section {
-        max-width: 100%;
+    .store-section-title {
+        margin-top: 40px !important;
+        margin-bottom: 15px !important;
+        font-size: 1.8rem !important;
+    }
+    
+    .store-section-subtitle {
+        margin-bottom: 25px !important;
+        font-size: 1rem !important;
+    }
+    
+    .scroll-controls {
+        display: none;
+    }
+
+    // ============================================
+    // SERVICIOS - TARJETAS HORIZONTALES CON SCROLL
+    // ============================================
+    .services-page {
+        .services-grid {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            gap: 0;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            > [class*="col-"] {
+                flex: 0 0 85% !important;
+                max-width: 85% !important;
+                padding-left: 8px;
+                padding-right: 8px;
+                
+                @media (min-width: 480px) {
+                    flex: 0 0 45% !important;
+                    max-width: 45% !important;
+                }
+                
+                @media (min-width: 640px) {
+                    flex: 0 0 33.333% !important;
+                    max-width: 33.333% !important;
+                }
+            }
+        }
+        
+        .service-item-page {
+            height: 100%;
+            margin-bottom: 5px;
+            min-width: 0;
+        }
+        
+        .section-title-services {
+            position: relative;
+            
+            &::after {
+                content: '← Desliza →';
+                display: block;
+                font-size: 0.9rem;
+                font-weight: normal;
+                color: $primary-color;
+                margin-top: 10px;
+                font-family: $font-primary;
+                opacity: 0.8;
+                animation: pulse 2s infinite;
+            }
+        }
+    }
+
+    // ============================================
+    // INFORMACIÓN - TARJETAS HORIZONTALES CON SCROLL
+    // ============================================
+    .info-section {
+        
+        // Misión y Visión - CON SCROLL
+        .info-grid-mv {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            gap: 0;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            > [class*="col-"] {
+                flex: 0 0 85% !important;
+                max-width: 85% !important;
+                padding-left: 8px;
+                padding-right: 8px;
+                
+                @media (min-width: 480px) {
+                    flex: 0 0 45% !important;
+                    max-width: 45% !important;
+                }
+                
+                @media (min-width: 640px) {
+                    flex: 0 0 33.333% !important;
+                    max-width: 33.333% !important;
+                }
+            }
+        }
+        
+        // Razón Social y Equipo - CON SCROLL
+        .info-grid-re {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            gap: 0;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            > [class*="col-"] {
+                flex: 0 0 85% !important;
+                max-width: 85% !important;
+                padding-left: 8px;
+                padding-right: 8px;
+                
+                @media (min-width: 480px) {
+                    flex: 0 0 45% !important;
+                    max-width: 45% !important;
+                }
+                
+                @media (min-width: 640px) {
+                    flex: 0 0 33.333% !important;
+                    max-width: 33.333% !important;
+                }
+            }
+        }
+        
+        .info-card {
+            height: 100%;
+            margin-bottom: 5px;
+            min-width: 0;
+        }
+        
+        // Indicador para Misión y Visión
+        .section-title-info-mv {
+            position: relative;
+            
+            &::after {
+                content: '← Desliza →';
+                display: block;
+                font-size: 0.9rem;
+                font-weight: normal;
+                color: $primary-color;
+                margin-top: 10px;
+                font-family: $font-primary;
+                opacity: 0.8;
+                animation: pulse 2s infinite;
+            }
+        }
+        
+        // Indicador para Razón Social y Equipo
+        .section-title-info-re {
+            position: relative;
+            
+            &::after {
+                content: '← Desliza →';
+                display: block;
+                font-size: 0.9rem;
+                font-weight: normal;
+                color: $primary-color;
+                margin-top: 10px;
+                font-family: $font-primary;
+                opacity: 0.8;
+                animation: pulse 2s infinite;
+            }
+        }
     }
 }
 
 @media (max-width: 576px) {
-    .hero .hero-title {
-        font-size: 1.8rem;
-    }
+    .hero {
+        .hero-title {
+            font-size: 1.8rem;
+        }
 
-    .hero .hero-carousel .carousel-item img {
-        height: 200px;
+        .hero-carousel .carousel-item img {
+            height: 200px;
+        }
     }
     
     .navbar-collapse {
         padding: 10px;
+    }
+    
+    .navbar-logo {
+        height: 45px;
     }
     
     .footer {
@@ -2189,46 +2496,34 @@ ul {
             }
         }
     }
-}
-
-// Estilos para el logo en la navbar - VERSIÓN SIMPLE
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.navbar-logo {
-    height: 60px; // Aumentado de 40px a 60px (50% más grande)
-    width: auto;
-    object-fit: contain;
-}
-
-// Ajustes responsive para mantenerlo grande en móvil
-@media (max-width: 768px) {
-    .navbar-logo {
-        height: 50px; // Sigue siendo grande en móvil
-    }
-}
-
-@media (max-width: 576px) {
-    .navbar-logo {
-        height: 45px; // Aún visible en móvil pequeño
-    }
-}
-
-// Logo en footer también más grande
-.footer-logo {
-    height: 65px; // Aumentado de 50px a 65px
-    width: auto;
-    object-fit: contain;
     
-    @media (max-width: 768px) {
-        height: 55px;
+    // Ajuste para productos en móvil muy pequeño
+    .pep-shop-section,
+    .medicines-section,
+    .food-section,
+    .accessories-section {
+        .row > [class*="col-"] {
+            flex: 0 0 90% !important;
+            max-width: 90% !important;
+        }
+    }
+    
+    // Ajuste para servicios en móvil muy pequeño
+    .services-page {
+        .services-grid > [class*="col-"] {
+            flex: 0 0 90% !important;
+            max-width: 90% !important;
+        }
+    }
+    
+    // ============================================
+    // AJUSTE PARA INFORMACIÓN EN MÓVIL MUY PEQUEÑO
+    // ============================================
+    .info-section {
+        .info-grid-mv > [class*="col-"],
+        .info-grid-re > [class*="col-"] {
+            flex: 0 0 90% !important;
+            max-width: 90% !important;
+        }
     }
 }
-
-
-
-
-
