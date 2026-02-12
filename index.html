@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Clínica Veterinaria Colitas Felices</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/general/logo6.png">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+           <a class="navbar-brand" href="index.html">
+               <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="navbar-logo">
+           </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html"><i class="fas fa-info-circle"></i> Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-stethoscope"></i> Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html"><i class="fas fa-shopping-bag"></i> Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero--carousel">
+        <div class="container hero-grid">
+            <div class="hero-intro text-center text-md-start">
+                <h1 class="hero-title">Clínica Veterinaria <span>Colitas Felices</span></h1>
+                <p class="hero-subtitle">Cuidamos con amor a tu mejor amigo. Servicios veterinarios de calidad con atención personalizada las 24 horas.</p>
+                
+                <div class="hero-actions d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-3">
+                    <a href="servicios.html" class="btn-hero">
+                        <i class="fas fa-stethoscope"></i> Ver Servicios
+                    </a>
+                    <a href="contacto.html" class="btn-hero btn-hero-outline">
+                        <i class="fas fa-calendar-check"></i> Reservar cita
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-carousel">
+                <div id="clinicCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500" aria-label="Carrusel de imágenes de la clínica">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+                        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/carrusel/img22.png" class="d-block w-100" alt="Veterinario atendiendo mascota en consulta">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/carrusel/img33.png" class="d-block w-100" alt="Cuidado y atención veterinaria">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/carrusel/img44.png" class="d-block w-100" alt="Mascotas felices y saludables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/carrusel/img55.png" class="d-block w-100" alt="Instalaciones de la clínica veterinaria">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h2 class="section-title">Bienvenidos a Colitas Felices</h2>
+                    <div class="welcome-text">
+                        <p>En la <strong>Clínica Veterinaria Colitas Felices</strong> nos dedicamos con pasión al cuidado integral de tus mascotas. Somos profesionales comprometidos con la salud y bienestar animal.</p>
+                        <p>Nuestra clínica cuenta con tecnología de vanguardia y un equipo humano capacitado para ofrecer la mejor atención a tu compañero peludo. Desde consultas de rutina hasta procedimientos especializados, estamos aquí para brindar el cuidado que tu mascota merece.</p>
+                        <p>Creemos en la medicina preventiva y en la educación a los dueños para garantizar una vida larga y saludable para todos los animales que atendemos.</p>
+                    </div>
+                    <div class="welcome-stats">
+                        <div class="stat-item">
+                            <h3>+500</h3>
+                            <p>Mascotas felices</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>+10</h3>
+                            <p>Años de experiencia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Emergencias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                    <div class="welcome-image">
+                        <img src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Veterinario atendiendo mascota">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="footer-logo">
+                       
+                    </div>
+                    <p class="footer-about">Clínica veterinaria especializada en el cuidado integral de tus mascotas. Amor y profesionalismo en cada consulta.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Cajamarca - San Ignacio - Tabaconas - CPP Panchia</li>
+                        <li><i class="fas fa-phone"></i> +51 925 645 619</li>
+                        <li><i class="fas fa-envelope"></i> info@colitasfelices.com</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8am - 8pm</li>
+                        <li><i class="fas fa-clock"></i> Sábados: 9am - 2pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Clínica Veterinaria Colitas Felices</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51925645619?text=Hola,%20quiero%20información%20sobre%20sus%20servicios%20veterinarios" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

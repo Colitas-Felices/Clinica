@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Clínica Veterinaria Colitas Felices</title>
+    <!-- Boostrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+   <link rel="icon" type="image/x-icon" href="assets/img/general/logo6.png">
+</head>
+<body>
+    <!-- Barra de naven -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+           <a class="navbar-brand" href="index.html">
+               <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="navbar-logo">
+           </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html"><i class="fas fa-info-circle"></i> Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-stethoscope"></i> Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html"><i class="fas fa-shopping-bag"></i> Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para atender a tu mascota</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-container">
+                        <h2>Formulario de Contacto</h2>
+                        <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre completo *</label>
+                                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+51 999 999 999">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Selecciona un asunto</option>
+                                    <option value="consulta">Consulta general</option>
+                                    <option value="cita">Solicitud de cita</option>
+                                    <option value="emergencia">Emergencia veterinaria</option>
+                                    <option value="tienda">Consulta sobre productos de tienda</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pet">Tipo de mascota</label>
+                                <select id="pet" name="pet">
+                                    <option value="" selected>No especificar</option>
+                                    <option value="perro">Perro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="ave">Ave</option>
+                                    <option value="roedor">Roedor</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Describe tu consulta o solicitud..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Deseo recibir información y promociones por correo electrónico</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                            
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de Redes Sociales Separada -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="social-contact">
+                        <h3 class="text-center mb-4">Síguenos en redes sociales</h3>
+                        <p class="text-center mb-5">Mantente al día con nuestras novedades, consejos para el cuidado de tu mascota y promociones especiales.</p>
+                        
+                        <div class="social-buttons justify-content-center">
+                            <a href="https://facebook.com" class="social-btn facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://instagram.com" class="social-btn instagram" target="_blank">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://tiktok.com" class="social-btn tiktok" target="_blank">
+                                <i class="fab fa-tiktok"></i> TikTok
+                            </a>
+                            <a href="https://youtube.com" class="social-btn youtube" target="_blank">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="faq-section">
+                        <h3>Preguntas Frecuentes</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Necesito cita previa para llevar a mi mascota?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, recomendamos agendar cita previa para garantizar una atención oportuna y sin esperas prolongadas. Sin embargo, en casos de emergencia atendemos de inmediato.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Atienden emergencias fuera del horario de atención?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, contamos con servicio de emergencias 24/7. Para emergencias fuera de horario, llama al +51 925 645 619 y nuestro equipo estará disponible para atenderte.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Qué métodos de pago aceptan?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Aceptamos efectivo, tarjetas de crédito y débito (Visa, MasterCard), y transferencias bancarias. Para compras en línea próximamente implementaremos pagos digitales.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Ofrecen servicios a domicilio?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, ofrecemos servicio de atención veterinaria a domicilio para consultas generales, vacunaciones y cuidados básicos. Este servicio tiene un costo adicional según la ubicación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="footer-logo">
+                       
+                    </div>
+                    <p class="footer-about">Clínica veterinaria especializada en el cuidado integral de tus mascotas. Amor y profesionalismo en cada consulta.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://youtube.com" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Cajamarca - San Ignacio - Tabaconas - CPP Panchia</li>
+                        <li><i class="fas fa-phone"></i> +51 925 645 619</li>
+                        <li><i class="fas fa-envelope"></i> info@colitasfelices.com</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8am - 8pm</li>
+                        <li><i class="fas fa-clock"></i> Sábados: 9am - 2pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Clínica Veterinaria Colitas Felices</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51925645619?text=Hola,%20quiero%20información%20sobre%20sus%20servicios%20veterinarios" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

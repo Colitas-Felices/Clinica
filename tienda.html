@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Clínica Veterinaria Colitas Felices</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/general/logo6.png">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="navbar-logo">
+           </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacion.html"><i class="fas fa-info-circle"></i> Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-stethoscope"></i> Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tienda.html"><i class="fas fa-shopping-bag"></i> Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Nuestra Tienda Veterinaria</h1>
+            <p>Todo lo que necesitas para el cuidado de tu mascota</p>
+        </div>
+    </section>
+
+    <!-- Sección Pep Shop -->
+    <section class="pep-shop-section" id="pep-shop">
+        <div class="container">
+            <h2 class="store-section-title">
+                <i class="fas fa-store"></i> Pep Shop
+            </h2>
+            <p class="store-section-subtitle">Accesorios, ropa y productos divertidos para tu mascota</p>
+            
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1554456854-55a089fd4cb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Correa para perro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Correa Retráctil</h3>
+                            <p>Correa extensible de 5 metros con mecanismo de bloqueo seguro.</p>
+                            <div class="product-price">S/ 45.90</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ropa para perro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Suéter Canino</h3>
+                            <p>Suéter tejido para perros pequeños y medianos, disponible en varios colores.</p>
+                            <div class="product-price">S/ 35.50</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/imj/hogartotal/r/razas-de-perros-beagle-2.jpg" alt="Cama para mascota">
+                        </div>
+                        <div class="product-info">
+                            <h3>Cama Ortopédica</h3>
+                            <p>Cama con memory foam para mascotas mayores o con problemas articulares.</p>
+                            <div class="product-price">S/ 120.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Juguete para perro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Juguete de Goma</h3>
+                            <p>Juguete resistente para perros que muerden mucho, ayuda a limpiar dientes.</p>
+                            <div class="product-price">S/ 25.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Medicamentos -->
+    <section class="medicines-section" id="medicamentos">
+        <div class="container">
+            <h2 class="store-section-title">
+                <i class="fas fa-pills"></i> Medicamentos y Productos Veterinarios
+            </h2>
+            <p class="store-section-subtitle">Productos farmacéuticos de calidad para la salud de tu mascota</p>
+            
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://cdn0.expertoanimal.com/es/posts/2/5/0/se_puede_usar_amoxicilina_de_humanos_en_perros_21052_2_600.jpg" alt="Antibiótico veterinario">
+                        </div>
+                        <div class="product-info">
+                            <h3>Antibiótico Canino</h3>
+                            <p>Amoxicilina 500mg para tratamiento de infecciones bacterianas en perros.</p>
+                            <div class="product-price">S/ 28.90</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://richmondvet.com.ar/wp-content/uploads/2019/03/rich_0005s_0003_Prazoquntel.jpg" alt="Antiparasitario">
+                        </div>
+                        <div class="product-info">
+                            <h3>Antiparasitario</h3>
+                            <p>Tabletas para desparasitación interna mensual, para perros hasta 10kg.</p>
+                            <div class="product-price">S/ 22.50</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://farvet.hn/rugeewhy/vitavet-ADE-x-50ml.jpg" alt="Vitaminas para mascotas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Complejo Vitamínico</h3>
+                            <p>Suplemento vitamínico para perros y gatos, mejora pelaje y energía.</p>
+                            <div class="product-price">S/ 35.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.msd-salud-animal.mx/wp-content/uploads/sites/43/2020/01/Nobivac-Rabia-viales-y-caja.jpeg" alt="Vacuna para mascotas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Vacuna Antirrábica</h3>
+                            <p>Vacuna para prevención de rabia en perros y gatos, dosis anual.</p>
+                            <div class="product-price">S/ 40.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Alimentos -->
+    <section class="food-section" id="alimentos">
+        <div class="container">
+            <h2 class="store-section-title">
+                <i class="fas fa-utensils"></i> Alimentos y Suplementos
+            </h2>
+            <p class="store-section-subtitle">Nutrición balanceada para cada etapa de vida de tu mascota</p>
+            
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://agrovetmanantial.com/assets/images/productos-veterinaria/miocane-premium.webp" alt="Alimento para perro adulto">
+                        </div>
+                        <div class="product-info">
+                            <h3>Alimento Premium Adulto</h3>
+                            <p>Alimento balanceado para perros adultos, 15kg, con proteína de alta calidad.</p>
+                            <div class="product-price">S/ 95.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://wongfood.vtexassets.com/arquivos/ids/658622-800-auto?v=638307849890900000&width=800&height=auto&aspect=true" alt="Alimento para cachorro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Alimento para Cachorros</h3>
+                            <p>Fórmula especial para cachorros hasta 1 año, 10kg, con DHA para desarrollo cerebral.</p>
+                            <div class="product-price">S/ 85.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dwe9b7785f/images/Hills-PD-cd-Multicare-1.8kg-Cuidado-urinario-Multicuidad-AG000093.jpg" alt="Alimento para gato">
+                        </div>
+                        <div class="product-info">
+                            <h3>Alimento para Gatos</h3>
+                            <p>Alimento para gatos adultos, 7.5kg, fórmula para control de bolas de pelo.</p>
+                            <div class="product-price">S/ 75.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://vetmasagro.com/wp-content/uploads/2024/03/Agility-Gold-Premios-Dental.jpg" alt="Premios para perro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Premios Dentales</h3>
+                            <p>Premios para perros que ayudan a limpiar dientes y mantener aliento fresco.</p>
+                            <div class="product-price">S/ 18.50</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Accesorios -->
+    <section class="accessories-section" id="accesorios">
+        <div class="container">
+            <h2 class="store-section-title">
+                <i class="fas fa-tshirt"></i> Accesorios
+            </h2>
+            <p class="store-section-subtitle">Complementos y accesorios para el cuidado diario de tu mascota</p>
+            
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61fs8rJ-avL._AC_UF894,1000_QL80_.jpg" alt="Comedero para mascota">
+                        </div>
+                        <div class="product-info">
+                            <h3>Comedero Antideslizante</h3>
+                            <p>Comedero de acero inoxidable con base de goma para evitar deslizamientos.</p>
+                            <div class="product-price">S/ 32.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.jersimport.com/wp-content/uploads/2025/11/imgi_1_H8c93669e564840c08b694f2d987ec099K-600x600.png" alt="Transportadora para mascota">
+                        </div>
+                        <div class="product-info">
+                            <h3>Transportadora</h3>
+                            <p>Transportadora plástica para mascotas pequeñas y medianas, ventilada y segura.</p>
+                            <div class="product-price">S/ 89.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://image.made-in-china.com/202f0j00zDUqmAhlHYot/Voovpet-Brand-Pet-Rehabilitation-Adjustable-Breathable-Straps-Dog-Harness-for-Old-Disabled-Joint-Injuries-Arthritis-Paralysis-Dogs.webp" alt="Arnés para perro">
+                        </div>
+                        <div class="product-info">
+                            <h3>Arnés Ajustable</h3>
+                            <p>Arnés de pecho para paseos cómodos y controlados, ajustable en 4 puntos.</p>
+                            <div class="product-price">S/ 42.50</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://mascota.pe/wp-content/uploads/2020/10/DENTCAR3.jpg" alt="Cepillo para mascota">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kit de Cepillado</h3>
+                            <p>Set completo de cepillos para diferentes tipos de pelaje de perros y gatos.</p>
+                            <div class="product-price">S/ 28.00</div>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de compras -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h4><i class="fas fa-shopping-cart"></i> Carrito de Compras</h4>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">S/ 0.00</span>
+            </div>
+            <button class="btn-checkout">
+                <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+            </button>
+        </div>
+    </div>
+    
+    <button class="cart-toggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <img src="assets/img/general/logo4.png" alt="Colitas Felices" class="footer-logo">
+                       
+                    </div>
+                    <p class="footer-about">Clínica veterinaria especializada en el cuidado integral de tus mascotas. Amor y profesionalismo en cada consulta.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Cajamarca - San Ignacio - Tabaconas - CPP Panchia</li>
+                        <li><i class="fas fa-phone"></i> +51 925 645 619</li>
+                        <li><i class="fas fa-envelope"></i> info@colitasfelices.com</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8am - 8pm</li>
+                        <li><i class="fas fa-clock"></i> Sábados: 9am - 2pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 - Clínica Veterinaria Colitas Felices</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51925645619?text=Hola,%20quiero%20información%20sobre%20productos%20de%20la%20tienda%20veterinaria" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
