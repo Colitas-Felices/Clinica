@@ -17,7 +17,6 @@ $animal-orange: #ffb74d;
 $animal-pink: #ff6b8b;
 
 
-
 // Tipografía
 $font-primary: 'Poppins', sans-serif;
 $font-secondary: 'Fredoka One', cursive;
@@ -1164,8 +1163,9 @@ button span,
     right: -400px;
     width: 380px;
     height: 100vh;
-    background-color: $white;
-    @include box-shadow(-5px, 0, 25px, rgba(0, 0, 0, 0.15));
+    background-color: #f5f7ff;
+    border-left: 1px solid rgba($brand-primary, 0.16);
+    @include box-shadow(-8px, 0, 28px, rgba($brand-navy, 0.18));
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -1180,8 +1180,8 @@ button span,
         justify-content: space-between;
         align-items: center;
         padding: 25px;
-        border-bottom: 2px solid rgba($dark-color, 0.1);
-        background: linear-gradient(135deg, $primary-color, $accent-color);
+        border-bottom: 2px solid rgba($brand-primary, 0.18);
+        background: linear-gradient(135deg, $brand-primary, darken($brand-primary, 8%));
         color: $white;
 
         h4 {
@@ -1216,6 +1216,7 @@ button span,
         flex: 1;
         overflow-y: auto;
         padding: 20px;
+        background: rgba($white, 0.7);
 
         .cart-item {
             display: flex;
@@ -1223,13 +1224,13 @@ button span,
             align-items: center;
             padding: 15px;
             margin-bottom: 15px;
-            background: rgba($primary-color, 0.05);
+            background: rgba($brand-primary, 0.06);
             border-radius: 10px;
-            border: 1px solid rgba($primary-color, 0.1);
+            border: 1px solid rgba($brand-primary, 0.16);
             @include transition;
 
             &:hover {
-                background: rgba($primary-color, 0.08);
+                background: rgba($brand-primary, 0.1);
                 transform: translateX(5px);
             }
 
@@ -1238,13 +1239,13 @@ button span,
 
                 h5 {
                     margin: 0 0 5px 0;
-                    color: $dark-color;
+                    color: #1f2f5a;
                     font-size: 1.1rem;
                 }
 
                 p {
                     margin: 0;
-                    color: $primary-color;
+                    color: #1f2f5a;
                     font-weight: 700;
                     font-size: 1.1rem;
                 }
@@ -1272,7 +1273,7 @@ button span,
 
         .empty-cart {
             text-align: center;
-            color: lighten($dark-color, 50%);
+            color: #3a4d7a;
             padding: 60px 20px;
 
             i {
@@ -1283,14 +1284,15 @@ button span,
 
             p {
                 font-size: 1.1rem;
+                color: #3a4d7a;
             }
         }
     }
 
     .cart-footer {
         padding: 25px;
-        border-top: 2px solid rgba($dark-color, 0.1);
-        background: rgba($primary-color, 0.02);
+        border-top: 2px solid rgba($brand-primary, 0.16);
+        background: rgba($brand-primary, 0.05);
 
         .cart-total {
             display: flex;
@@ -1298,7 +1300,7 @@ button span,
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 25px;
-            color: $dark-color;
+            color: #1f2f5a;
 
             .total-price {
                 color: $primary-color;
